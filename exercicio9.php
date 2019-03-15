@@ -38,7 +38,39 @@ $galões_custo= $galões_quantidade * $galao_preço;
 print"será necessario = $galões_quantidade galões ao custo de =R$$galões_custo"; 
 
 //--------------------------------------------------------------------------------------
+ # galao
+$galao_preço=25;
+$galões_rendimento= 21.6;#6 * 3.6
+ print"\nquantos metros quadrados serão pintados?\n";
+ $areapintar = (float) fgets(STDIN);
+$galões_quantidade= ceil($areapintar/$galões_rendimento);
+$galões_custo= $galões_quantidade * $galao_preço;
+print"será necessario = $galões_quantidade galões ao custo de =R$$galões_custo"; 
+//--------------------------------------------------------------------------------------
+#lata
+$lata_preço=80;
+$lata_rendimento=108;
+
+#galao
+$galao_preço=25;
+$galões_rendimento=21.6;#6 * 3.6
+
+$Mquadrados = 1.1;
+
 //$area_nova=$areapintar + ($areapintar * 0.10);
-print "latas e galões:\n";
+print "quantos metros quadrados serão pintados?\n";
+$Mquadrados= fgets(STDIN);
+
+print"\n";
+
+$quantidade_lata=(int)($Mquadrados/$lata_rendimento);
+$faltou = $Mquadrados % $lata_rendimento;
+$quantidade_galao=ceil($faltou/$galões_rendimento);
+$preco_lata=$quantidade_lata * 80;
+$preço_galao=$quantidade_galao * 25;
+$preço_total=$preco_lata + $preço_galao;
+
+Print"Voce ira utilizar $quantidade_lata latas e $quantidade_galao galões, preço total sera de: \n RS $preço_total.";
+
 
 
